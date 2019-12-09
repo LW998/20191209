@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+    <welcome-file-list>
+    <welcome-file>bannerServlet</welcome-file>
+  </welcome-file-list>
+   <servlet>
+		<servlet-name>bannerServlet</servlet-name>
+		<servlet-class>com.lw.servlet.bannerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>bannerServlet</servlet-name>
+    <url-pattern>/bannerServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>goodsServlet</servlet-name>
+    <servlet-class>com.lw.servlet.goodsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>goodsServlet</servlet-name>
+    <url-pattern>/goodsServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>blogServlet</servlet-name>
+    <servlet-class>com.lw.servlet.blogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>blogServlet</servlet-name>
+    <url-pattern>/blogServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>footServlet</servlet-name>
+    <servlet-class>com.lw.servlet.footServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>footServlet</servlet-name>
+    <url-pattern>/footServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>shopcarServlet</servlet-name>
+    <servlet-class>com.lw.servlet.shopcarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>shopcarServlet</servlet-name>
+    <url-pattern>/shopcarServlet</url-pattern>
+  </servlet-mapping>
+
+<servlet>
+    <servlet-name>addcarServlet</servlet-name>
+    <servlet-class>com.lw.servlet.addcarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addcarServlet</servlet-name>
+    <url-pattern>/addcarServlet</url-pattern>
+  </servlet-mapping>
+  
+<servlet>
+    <servlet-name>deletecarServlet</servlet-name>
+    <servlet-class>com.lw.servlet.deletecarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deletecarServlet</servlet-name>
+    <url-pattern>/deletecarServlet</url-pattern>
+  </servlet-mapping>  
+
+</web-app>

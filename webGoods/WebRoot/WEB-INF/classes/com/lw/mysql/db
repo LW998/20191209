@@ -1,0 +1,57 @@
+CREATE TABLE head(
+  headtitle varchar(30) NOT NULL COMMENT '轮播图标题',
+  headname varchar(30)  NOT NULL COMMENT '轮播图名称',
+  headcontent varchar(500) NOT NULL COMMENT '轮播图描述',
+  img varchar(50) NOT NULL COMMENT '图片路径'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品分类表';
+
+CREATE TABLE blog(
+  blogtitle varchar(50) NOT NULL COMMENT '博客标题',
+  blogauthor varchar(50) NOT NULL COMMENT '博客作者',
+  blogtime varchar(20) NOT NULL COMMENT '博客时间',
+  blogcontent varchar(200)  NOT NULL COMMENT '博客内容',
+  img varchar(50) NOT NULL COMMENT '图片路径'
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='博客表';
+
+CREATE TABLE foot(
+  footname varchar(50) NOT NULL COMMENT '页脚标题',
+  titleone varchar(50) NOT NULL COMMENT '小标题1内容',
+  titleoneurl varchar(50) NOT NULL COMMENT '小标题1地址',
+  titletwo varchar(50) NOT NULL COMMENT '小标题2内容',
+  titletwourl varchar(50) NOT NULL COMMENT '小标题2地址',
+  titlethree varchar(50) NOT NULL COMMENT '小标题3内容',
+  titlethreeurl varchar(50) NOT NULL COMMENT '小标题3地址',
+  titlefour varchar(50) NOT NULL COMMENT '小标题4内容',
+  titlefoururl varchar(50) NOT NULL COMMENT '小标题4地址',
+  titlefive varchar(50) NOT NULL COMMENT '小标题5内容',
+  titlefiveurl varchar(50) NOT NULL COMMENT '小标题5地址'
+)  ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='页脚表';
+
+CREATE TABLE goods(
+  goodsid int NOT NULL auto_increment COMMENT '商品id',
+  goodsname varchar(30) NOT NULL COMMENT '商品名称',
+  goodsprice varchar(20) NOT NULL COMMENT '商品价格',
+  img varchar(50) NOT NULL COMMENT '图片路径',
+  PRIMARY KEY(goodsid) 
+) auto_increment =10 ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品分类表';
+
+insert into head values ('great design collection','cloth covered accent chair','Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiuiana Smod Tempor Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip.','images/slider/slider1.png'),
+('great design collection','mapple wood accent chair','Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiuiana Smod Tempor Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip.','images/slider/slider2.png'),
+('great design collection','valvet accent arm chair','Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit, Sed Do Eiuiana Smod Tempor Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip.','images/slider/slider3.png');
+
+insert into goods values(101,'wooden chair','$65.00','images/collection/arrivals1.png'),
+(102,'single armchair','$80.00','images/collection/arrivals2.png'),
+(103,'wooden armchair','$40.00','images/collection/arrivals3.png'),
+(104,'stylish chair','$100.00','images/collection/arrivals4.png'),
+(105,'modern chair','$120.00','images/collection/arrivals5.png'),
+(106,'mapple wood dinning table','$140.00','images/collection/arrivals6.png'),
+(107,'arm chair','$90.00','images/collection/arrivals7.png'),
+(108,'wooden bed','$140.00','images/collection/arrivals8.png');
+
+insert into blog values ('Why Brands are Looking at Local Language','Robert Norby','18th March 2018','Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia,consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt....','images/blog/b1.jpg'),
+('Why Brands are Looking at Local Language','Robert Norby','18th March 2018','Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia,consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt....','images/blog/b2.jpg'),
+('Why Brands are Looking at Local Language','Robert Norby','18th March 2018','Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia,consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt....','images/blog/b3.jpg');
+
+insert into foot values ('Information','about us','#','contact us','#','news','#','store','#','',''),
+ ('collections','wooden chair','#','royal cloth sofa','#','accent chair','#','bed','#','hanging lamp','#'),
+ ('my accounts','my account','#','wishlist','#','Community','#','order history','#','my cart','#');
