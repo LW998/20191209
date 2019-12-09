@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+  <welcome-file>welcome.jsp</welcome-file>
+ </welcome-file-list>
+ <context-param>
+  <param-name>contextConfigLocation</param-name>
+  <param-value>classpath:com/lw/config/spring.xml</param-value>
+ </context-param>
+ <listener>
+  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ </listener>
+ <servlet>
+  <servlet-name>springMVC</servlet-name>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  <init-param>
+   <param-name>contextConfigLocation</param-name>
+   <param-value>classpath:com/lw/config/springMVC.xml</param-value>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>springMVC</servlet-name>
+  <url-pattern>/</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet-mapping>
+  <servlet-name>default</servlet-name>
+  <url-pattern>*.png</url-pattern>
+  <url-pattern>*.jpg</url-pattern>
+  <url-pattern>*.js</url-pattern>
+  <url-pattern>*.eot</url-pattern>
+  <url-pattern>*.svg</url-pattern>
+  <url-pattern>*.ttf</url-pattern>
+  <url-pattern>*.woff</url-pattern>
+  <url-pattern>*.woff2</url-pattern>
+   <url-pattern>*.scss</url-pattern>
+    <url-pattern>*.less</url-pattern>
+  <url-pattern>*.css</url-pattern>
+ </servlet-mapping>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+</web-app>

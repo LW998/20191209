@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.lw.mapper.goodsMapper">
+	<select id="zShow" resultType="goods" >
+      select * from goods where categorize ='z'
+   </select>
+   <select id="jShow" resultType="goods" >
+      select * from goods where categorize ='j'
+   </select>
+   <select id="qShow" resultType="goods" >
+      select * from goods where categorize ='q'
+   </select>
+   <select id="sShow" resultType="goods" >
+      select * from goods where categorize ='s'
+   </select>
+   <select id="yShow" resultType="goods" >
+      select * from goods where categorize ='y'
+   </select>
+   <select id="ShowGoods" resultType="goods">
+      select * from goods order by author
+   </select>
+   <select id="queryName" resultType="goods" >
+      select * from goods where gname like CONCAT(CONCAT('%',#{gname},'%'))
+   </select>
+   <select id="queryPubli" resultType="goods" >
+      select * from goods where publi like CONCAT(CONCAT('%',#{publi},'%'))
+   </select>
+   <select id="queryAuthor" resultType="goods" >
+      select * from goods where author like CONCAT(CONCAT('%',#{author},'%'))
+   </select>
+</mapper>

@@ -1,0 +1,65 @@
+/* Essence Button */
+.amado-btn {
+  display: inline-block;
+  min-width: 50px;
+  height: 30px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 5px 20px 10px 20px;
+  background-color: tan;
+}
+
+.amado-btn.active,
+.amado-btn:hover,
+.amado-btn:focus {
+  font-size: 18px;
+  color: #ffffff;
+  background-color: lightseagreen;
+}
+
+/* :: 10.0 Checkout Area CSS */
+
+
+.cart-btn {
+  position: relative;
+  left: 20%;
+}
+
+
+.cart-summary {
+  width: 100%;
+  line-height: 50px;
+  border: 1px solid antiquewhite;
+}
+
+.qty-text {
+  width: 18%;
+  margin: 0px 10px;
+}
+
+.qty-btn {
+  position: relative;
+  top: 58px;
+}
+
+.cart_product_desc h5 {
+  position: relative;
+  top: 52px;
+}
+
+.price {
+  padding-top: 60px;
+}
+
+.qty-btn .btn {
+  position: relative;
+  top: 30px;
+  left: 120px;
+}
+
+#plusPri {
+  border-bottom: 1px solid #ccc;
+}

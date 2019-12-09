@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  background: #eeeeec;
+  border: 1px solid slategrey;
+  height: 50px;
+}
+
+.top h2 {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+}
+
+.top p {
+  display: inline-block;
+  margin-left: 50px;
+}
+
+.top span {
+  float: right;
+  line-height: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+/* 注册框代码 */
+.main {
+  width: 50%;
+  margin: 10% auto;
+}
+
+.left {
+  float: left;
+  width: 25%;
+  margin-top: 15px;
+  text-align: right;
+}
+
+.left label {
+  margin-right: 20px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.right {
+  float: left;
+  width: 30%;
+  margin-top: 15px;
+}
+
+.tip {
+  float: left;
+  width: 25%;
+  margin-top: 15px;
+}
+
+.tip span {
+  color: #ccc;
+  margin-left: 20px;
+  height: 30px;
+  font-size: 10px;
+  line-height: 30px;
+}
+
+.row input {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+/* input[type=submit] {
+    font-size: 10px;
+    color: white;
+    background-color: #3ab392;
+    border: none;
+  } */
+.sub {
+  font-size: 10px;
+  color: white;
+  background-color: #3ab392;
+  border: none;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+  border: none;
+  vertical-align: middle;
+}
+
+.read {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}

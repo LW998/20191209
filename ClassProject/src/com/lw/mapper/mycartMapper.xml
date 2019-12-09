@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.lw.mapper.mycartMapper">
+   <select id="showCart" resultType="mycart" parameterType="mycart">
+      select a.uid,a.gid,b.gname,b.price,b.img,a.qty from cart a, goods b where a.gid=b.gid and a.uid=#{uid} order by a.time desc
+   </select>
+   <select id="cartQty" resultType="int" >
+   select IFNULL(sum(qty),0) as qty from cart where uid=#{uid}
+   </select>
+   <delete id="remall" parameterType="mycart">
+   delete from cart where uid=#{uid} and gid=#{gid}
+   </delete>
+   <insert id="addcart" parameterType="mycart">
+	insert into cart(uid,gid,time) values(#{uid},#{gid},now())
+   </insert>
+   <select id="selcart" resultType="int">
+   select IFNULL(sum(qty),0) as qty from cart where uid=#{uid} and gid=#{gid}
+   </select>
+   <update id="upcart" parameterType="mycart">
+   update cart set qty=qty+1  where uid=#{uid} and gid=#{gid}
+   </update>
+   <update id="downcart" parameterType="mycart">
+   update cart set qty=qty-1  where uid=#{uid} and gid=#{gid}
+   </update>
+   <update id="valcart" parameterType="mycart">
+   	update cart set qty=#{qty}  where uid=#{uid} and gid=#{gid}
+   </update>
+</mapper>

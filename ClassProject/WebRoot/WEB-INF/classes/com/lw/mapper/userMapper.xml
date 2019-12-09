@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.lw.mapper.userMapper">
+   <select id="login" resultType="user" parameterType="user">
+      select * from user where name=#{name} and pwd=#{pwd}
+   </select>
+   <insert id="reg" parameterType="user">
+      insert into user(name,pwd,addr,tel) values(#{name},#{pwd},#{addr},#{tel})   
+   </insert>
+   <select id="decide" resultType="int" parameterType="user">
+      select count(*) r from user where name=#{name}
+   </select>
+</mapper>

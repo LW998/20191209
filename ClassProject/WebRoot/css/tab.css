@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+#tabBox {
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+#navBox {
+    display: flex;
+}
+
+#navBox li {
+    box-sizing: border-box;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    /* border-top: 2px solid lightseagreen;
+    border-left: 2px solid lightseagreen;
+    border-right: 2px solid lightseagreen; */
+    border-bottom: 1px solid lightseagreen;
+    /* border: 2px solid lightseagreen; */
+    border-radius: 5px 5px 0 0;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 3;
+
+}
+
+#navBox li:first-child {
+    margin-left: 20%;
+}
+
+#tabBox>div {
+    display: none;
+    box-sizing: border-box;
+    padding: 10px;
+    border-top: 1px solid lightseagreen;
+    border-width: 70%;
+    position: relative;
+    z-index: 2;
+}
+
+#tabBox>div.active {
+    display: block;
+}
+
+#navBox li.active {
+    border-bottom-color: #fff;
+    color: rgb(50, 182, 175);
+    border-top: 2px solid lightseagreen;
+    border-left: 2px solid lightseagreen;
+    border-right: 2px solid lightseagreen;
+}
+
+.tab_list {
+    border: 1px solid slategrey;
+    margin: 10px;
+}
+
+.container {
+    width: 100%;
+    padding-left: 7%;
+}
+
+.tabs li {
+    margin-left: 1%;
+    cursor: pointer;
+    height: 280px;
+}
+
+.tabs li:hover {
+    box-shadow: 6px 6px 3px rgb(72, 78, 83);
+    transform: scale3d(1.05, 1.05, 1.05);
+    transition: box-shadow 0.5s ease, transform 0.5s;
+
+}
+
+.tab_list p a:hover {
+    color: tan;
+    text-decoration: underline;
+}
+
+.tab_list img {
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.tab_list p a {
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+    color: #000;
+    position: relative;
+}
+
+.btn-info {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+.ctn {
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.ctn p span,
+.ctn p {
+    color: tomato;
+    font-size: 12px;
+}
+
+.ctn b,
+.ctn i {
+    color: black;
+
+}
+
+/*nav*/
+.navP {
+    height: 30PX;
+    line-height: 30px;
+    padding: 10px;
+    margin-top: 40%;
+    font-size: 13px;
+}
+
+.navP a {
+    cursor: pointer;
+}
+
+.navP a:hover {
+    color: tan;
+}
+
+.nav li a {
+    color: #000;
+}
